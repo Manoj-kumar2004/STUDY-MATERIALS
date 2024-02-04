@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root
+    {
+        --back-col:green;
+        --finan:yellow;
+        --animation-dur: 1s;
+    }
+    div
+    {
+        width: 100px;
+        height: 200px;
+        background-color: greenyellow;
+ animation-name: anim;
+transform: rotate(20deg);
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+animation-duration: 2s;    }
+    @keyframes anim {
+        from{
+            filter: hue-rotate(0deg);
+            transform: rotate(0deg);
+            transform: translate(0,0);
+        }
+        to
+        {
+            filter: hue-rotate(360deg);
+            transform:rotate(20deg);
+            transform:scale(1.5);
+            transform: translate(200px,200px);
+
+        }
+    }
+</style>
+<body>
+    <div>
+
+    </div>
+    
+</body>
+</html>

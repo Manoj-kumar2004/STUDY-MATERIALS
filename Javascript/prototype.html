@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="
+        choice='rock'
+        rock();
+        ">
+        ROCK
+    </button>
+    <button onclick="
+     choice='paper'
+     paper()">
+        PAPER
+    </button>
+    <button onclick="
+    choice='scissor'
+    scissor()">
+        SICISSOR
+    </button>
+    <script>
+        let choice="";
+        function rock()
+        {
+        let computer=Math.floor(Math.random()*4)
+        console.log(computer)
+
+        
+            if(computer===2) console.log("You win");
+            else if (computer===3) console.log("You Loose");
+            else console.log("Draw");
+        }
+        function paper()
+        {
+        let computer=Math.floor(Math.random()*4)
+        console.log(computer)
+
+            if(computer===2) console.log("You Lose");
+            else if (computer===3) console.log("Draw");
+            else console.log("You Win");
+        }
+        function scissor()
+        {
+        let computer=Math.floor(Math.random()*4)
+        console.log(computer)
+        
+        
+            if(computer===2) console.log("Draw");
+            else if (computer===3) console.log("You win");
+            else console.log("you lose");
+        }
+        
+    </script>
+</body>
+</html>

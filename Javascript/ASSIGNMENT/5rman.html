@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/5rman.css">
+</head>
+<body>
+   
+    <div class="wrap">
+    <div class="cover">
+        <button onclick="
+        calculate('0')">0</button>
+        <button onclick="
+            calculate('1')
+            ">1</button>
+        <button onclick="
+        calculate('2')
+        ">2</button>
+        <button onclick="
+        calculate('3')">3</button>
+        <button onclick="
+        calculate('4')">4</button>
+        <button onclick="
+        calculate('5')">5</button>
+        <button onclick="
+        calculate('6')">6</button>
+        <button onclick="
+        calculate('7')">7</button>
+        <button onclick="
+        calculate('8')">8</button>
+        <button onclick="
+        calculate('9')">9</button>
+        <button onclick="
+        calculate('+')">+</button>
+        <button onclick="
+        calculate('-')">-</button>
+        <button onclick="
+        calculate('/')">/</button>
+        <button onclick="
+        calculate('*')">*</button>
+        <button onclick="
+        result()" >=</button>
+        <button onclick="
+        calculation.result='';
+        localStorage.removeItem('calculation');
+        ">Clear</button>
+    </div>
+<script>
+    let calculation=JSON.parse(localStorage.getItem("calculation"));
+    if(calculation===null)
+    {
+        calculation={
+            result:""
+        }
+    }    
+    function calculate(operator)
+    {
+        calculation.result+=operator;
+        console.log(calculation.result);
+    }
+    function result()
+    {
+        calculation.result=eval(calculation.result);
+        if(calculation.result===undefined || isNaN(calculation.result))
+        {
+            console.log('error');
+            calculation.result='0';
+        }
+        console.log(calculation.result);
+        localStorage.setItem("calculation",JSON.stringify(calculation));
+    }
+    window.onload = function () {
+            if (calculation.result !== '') {
+               console.log(calculation.result);
+            }
+        };
+    </script>
+</body>
+</html>

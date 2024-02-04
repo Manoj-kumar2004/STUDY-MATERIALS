@@ -1,0 +1,55 @@
+.container
+{   width: 300px;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 40px;
+
+}
+.container img
+{
+    width: 300px;    box-shadow: 0 0 5px grey;
+}
+.text
+{
+    display: flex;
+    flex-direction: row;
+}
+.text img
+{   object-fit: cover;
+    height:50px;
+    width: 50px;
+    margin: 0;
+    border-radius: 25px;
+}
+.content
+{
+    flex:1;
+}
+.title
+{   
+    font-weight: 700;
+    font-family: roboto;
+    line-height: 25px;
+}
+.channel,.views
+{
+    color:grey;
+}
+.video
+{
+    position: relative;
+}
+.time
+{
+    color:white;
+    font-weight: 600;
+    padding: 4px;
+    font-family: roboto,arial;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: black;
+    border-radius: 2px;
+}

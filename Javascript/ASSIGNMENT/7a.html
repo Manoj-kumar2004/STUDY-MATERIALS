@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="
+    let temp=Number(prompt('Please enter your temperature'));
+    let unit=prompt('please give unit')
+    converttemp(temp,unit);
+        ">CONVErt</button>
+    <script>
+        function converttemp(mag,unit)
+        {
+            let result;
+            if(unit==='C' || unit==='c')
+            {
+                result=(mag*(9/5)+32)
+                console.log(`The converted :${result} Fahrenheit`);
+            }
+            else
+            {
+                result=(mag-32)*(5/9);
+                console.log(`The converted :${result} celsius`);
+            }
+        }
+    </script>
+</body>
+</html>

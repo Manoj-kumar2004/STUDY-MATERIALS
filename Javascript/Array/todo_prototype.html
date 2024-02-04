@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class='todo' placeholder="Enter the to do" onkeydown="
+    if(event.key==='Enter') adding();
+    "><button class='add' onclick='adding()'
+   >Add</button>
+   <div class="result">
+
+   </div>
+<script>
+let a=[];
+function adding()
+{
+    a.push(document.querySelector('.todo').value)
+    let html='';
+    for(let i=0;i<a.length;i++)
+    {
+        html+=`<p>${a[i]}</p>`
+    }
+    document.querySelector('.result').innerHTML=html;
+}
+
+    </script> 
+</body>
+</html>

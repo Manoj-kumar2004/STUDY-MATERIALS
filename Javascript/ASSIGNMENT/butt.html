@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Style Change</title>
+<style>
+  .button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .clicked {
+    background-color: red;
+  }
+</style>
+</head>
+<body>
+<button id="button1" class="button" onclick="changeStyle('button1')">Button 1</button>
+<button id="button2" class="button" onclick="changeStyle('button2')">Button 2</button>
+<button id="button3" class="button" onclick="changeStyle('button3')">Button 3</button>
+<script>
+function changeStyle(buttonid)
+{
+let buttons=document.querySelectorAll('.button');
+buttons.forEach(function(button)
+{
+    button.classList.remove('clicked');
+})
+document.getElementById(buttonid).classList.add('clicked');
+}
+
+</script>
+</body>
+</html>

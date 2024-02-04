@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        font-size: medium;
+        font-family:arial;
+    }
+    .button
+    {
+        background-color: rgb(25, 212, 25);
+        border:solid rgb(25, 212, 25);
+        margin: 10px;
+    }
+.result p{
+    display: inline-block;
+}
+</style>
+<body>
+    <div class="container">
+        <p class="text">
+Amazon Shipping Calculator<br>
+All The Orders Under $40 = $10 Shipping charge
+        </p>
+        <input type="text" class="JUICE" name="price" id="pri" placeholder="Enter amount"><button class="button" onclick="
+        cl();
+        ">Calculate</button>
+        <div class="result">
+            The total price is : <p></p>
+        </div>
+    </div>
+    <script>
+        function cl()
+        {
+            let a=Number(document.querySelector('.JUICE').value);
+            if(a>40)
+            {
+                
+                document.querySelector('.result p').innerHTML='$'+a;
+
+            }
+            else
+            {
+                document.querySelector('.result p').innerHTML=('$'+(a+10));
+            }
+        }
+    </script>
+</body>
+</html>

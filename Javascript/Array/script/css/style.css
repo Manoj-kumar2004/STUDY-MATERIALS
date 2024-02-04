@@ -1,0 +1,35 @@
+input
+{
+    padding: 5px;
+    height: 25px;
+    font-size:15px;
+}
+input::placeholder
+{
+    font-size: 15px;
+}
+body button
+{
+    height:38.2px;
+    background-color: green;
+    border: none;
+    box-shadow: 0 0 5px rgb(0,0,0);
+}
+.result button
+{
+border: none;
+background-color: red;
+color: white;
+}
+.result p
+{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    column-gap: 10px;
+}
+.tit
+{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    column-gap: 10px;
+}

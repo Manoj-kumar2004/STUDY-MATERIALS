@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button onclick="a1()">
+1
+</button>
+<button onclick="a2()">
+2
+</button>
+<button onclick="a3()">
+3
+</button>
+<button onclick="a4()">
++
+</button>
+<button onclick="a()">
+    =
+</button>
+<script>
+    let cal="";
+    function a1()
+    {
+        cal+="1"
+    }
+    function a2()
+    {
+        cal+="2"
+    }
+    function a3()
+    {
+        cal+="3"
+    }
+    function a4()
+    {
+        cal+="+"
+    }
+    function a()
+    {
+       let a=cal.split("+");
+        let b= Number(a[0]);
+        let c = Number(a[1]);
+        console.log(b+c);
+        cal="";
+    }
+</script>
+</body>
+</html>

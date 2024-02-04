@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        .container
+        {   width:300px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Rock Paper Scissor</h2>
+        <div class="buttons">
+            <button onclick="
+                result('rock')
+                
+                ">Rock</button>
+            <button onclick="
+            result('paper')
+            
+            ">Paper</button>
+            <button
+            onclick="
+            result('scissor')
+            
+            ">Scissor</button>
+        </div>
+        <div class="result">
+
+        </div>
+        <div class="choice">
+
+        </div>
+        <button class="clear" 
+        onclick="
+        document.querySelector('.choice').innerHTML='win:0 lose:0 tie:0'
+        score={
+            win:0,
+            lose:0,
+            tie:0
+        }
+        localStorage.removeItem('score')
+        ">Reset</button>
+    </div>
+    <script>
+        function result(choice)
+        {
+ const outcomes = {
+    'rock': { 3: 'win', 2: 'lose', 1: ' tie' },
+    'paper': { 1: 'win', 3: 'lose', 2: ' tie' },
+    'scissor': { 2: 'win', 1: 'lose', 3: ' tie' }
+  };
+  let computer=Math.ceil(Math.random()*3);
+            let result=outcomes[choice][computer]
+            let score=JSON.parse(localStorage.getItem("score"));
+            if(score===null)
+            {
+                score=
+                {
+                    win:0,
+                    lose:0,
+                    tie:0
+                }
+            }
+            if(result==='win')
+            {
+                score.win+=1;
+            }
+            else if (result==='lose')
+            {
+                score.lose+=1;
+            }
+            else
+            {
+                score.tie+=1;
+            }
+
+        localStorage.setItem('score',JSON.stringify(score))
+        document.querySelector(".choice").innerHTML=`win:${score.win}
+
+lose:${score.lose} tie:${score.tie}`;
+
+document.querySelector('.result').innerHTML=`You ${result}
+Your choice ${choice} computers choice ${outcomes[choice][computer]}`
+
+
+        }
+    </script>
+</body>
+</html>

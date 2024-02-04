@@ -1,0 +1,75 @@
+button
+{   border-radius: 5px;
+    box-sizing: border-box;
+    border: solid black 2px; 
+    cursor: pointer;
+}
+.Amazon
+{
+    width:120px;
+    border:none;
+    background-color: yellow;
+    color:black;
+    height: 25px;
+    border-radius: 12.5px;
+    margin-top: 50vh;
+    margin-left: 100vh;
+    transition:background-color 1s,color 1s,box-shadow 1s;
+
+}
+.Amazon:hover,.Amazon:active
+{   color:violet;
+    opacity: 0.6;
+    background-color: black;
+    box-shadow:100px 100px 10px grey;
+}
+.Download
+{
+    border-width: 1px;
+    border:solid rgba(7, 0, 6, 0.599);
+    height: 40px;
+    width:100px;
+    color:rgb(215, 8, 247);
+    background-color: white;
+
+    
+
+}
+#youtube
+{   border : white;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    size: 2px;
+    margin:2px 2px 2px;
+}
+#twitter
+{   border-color: blue;
+    color: blue;
+
+}
+body #youtube
+{   
+    display: flex;    width: 50%;
+    justify-content: center;
+}
+.stretch
+{
+    color:green;
+    background-color: grey;
+    padding-top: 5px;
+    padding-left:auto;
+    padding:5px 5px 5px 5px;
+    transition: padding 0.15s, background-color 0.15s,color 0.15s;
+}
+.stretch:hover{
+    padding:10px;
+    background-color: black;
+    color:white;
+}
+.stretch:active
+{
+    padding:20px;
+    background-color: white;
+    color:black;
+}

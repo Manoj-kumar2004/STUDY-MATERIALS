@@ -1,0 +1,24 @@
+.center
+{
+    text-align: center;
+}
+.center h1
+{
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.center p{
+    color: gray;
+    font-size: 50px;
+    font-style:italic;
+}
+button
+{
+    background-color: blue;
+    height: 110px;
+    border-radius: 55px;
+}
+body
+{
+vertical-align: baseline;
+}

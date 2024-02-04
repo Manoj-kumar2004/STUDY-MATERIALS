@@ -1,0 +1,25 @@
+.flex
+{   
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    height: 300px;
+}
+.row1
+{
+width: 50px;
+background-color: pink;
+
+}
+.row2
+{
+    width: 75px;
+    background-color: yellow;
+}
+.row3
+{
+    background-color: white;
+    flex:1;
+}

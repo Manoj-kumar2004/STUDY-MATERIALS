@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        --transition-delay:1s;
+        overflow: hidden;
+    }
+    .box
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position:relative;
+        height:500px;
+        transition: var(--transition-delay);
+    }
+    .icons,.icons1
+    {
+        position: absolute;
+        width:100px;
+        height:100px;
+        background-color: cyan;
+    }
+    .icons
+    {
+        top:0;
+    }
+    .icons1
+    {   bottom:50%;
+        background-color: violet;
+ 
+    }
+    .rot
+    {
+        transform: rotate(180deg);
+    }
+    button{
+        position: absolute;
+        top:0;
+        left:90px;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="icons"></div>
+        <div class="icons1"></div>
+        <button class="asd">lic</button>
+
+    </div>
+    <script>
+        document.querySelector('.asd').addEventListener('click',()=>
+{
+    document.querySelector('.box').classList.toggle('rot');
+})
+    </script>
+</body>
+</html>

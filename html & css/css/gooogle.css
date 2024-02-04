@@ -1,0 +1,29 @@
+.red
+{
+    background-color:Red;
+    color: whitesmoke;
+    padding: 10px;
+    text-align: center;
+    border: orange;
+    box-shadow:5px 5px 5px rgb(255, 64, 0) ;
+}
+.views,bx bxs-radiation
+{
+    font-style: italic;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+body
+{
+    font-family: 'ruda', sans-serif;
+} 
+.img
+{   
+    margin-left: 500px;
+    border:dotted black 1px;
+    border-radius: 100px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
