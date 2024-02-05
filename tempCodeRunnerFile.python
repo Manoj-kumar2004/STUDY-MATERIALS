@@ -1,0 +1,7 @@
+import pandas as p
+import numpy as np
+data=np.random.randint(low=1,high=100,size=(3,3))
+col=['score','life','play']
+new_datframe=p.DataFrame(data=data,columns=col)
+print(new_datframe)
+print(new_datframe['score'].head(33))
