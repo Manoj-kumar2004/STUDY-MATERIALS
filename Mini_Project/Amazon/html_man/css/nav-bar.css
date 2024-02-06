@@ -1,3 +1,8 @@
+:root
+{
+    --amazon-color: rgb(254,189,105);
+
+}
 body
 {
     margin:0;
@@ -5,8 +10,7 @@ body
     font-family: 'Protest Riot', sans-serif;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
-
+    margin-top:100px;
 }
 nav
 {
@@ -15,6 +19,12 @@ nav
 }
 .nav-bar
 {
+    top:0;
+    left:0;
+    right:0;
+    position:fixed;
+    width: 100%;
+    z-index: 100;
     background-color: rgb(19, 25, 33);
     height: 70px;
     display: flex;
@@ -39,6 +49,7 @@ nav
 }
 .search input{
     max-width: 800px;
+    min-width: 300px;
     width:100%;
     height: 40px;
     border-radius: 5px;
@@ -55,14 +66,14 @@ nav
 .search input:focus,.search input:hover
 {
     outline:none;
-    border: solid 2px rgb(254,189,105);
+    border: solid 2px var(--amazon-color);
 }
 .search button
 {
     margin-left: -5px;
-    border:solid rgb(254,189,105) 1px;
+    border:solid var(--amazon-color) 1px;
     border-radius: 0px 5px 5px 0px;
-    background-color: rgb(254,189,105);
+    background-color: var(--amazon-color);
     width: 30px;
 
 }
@@ -101,5 +112,5 @@ width:100px
     top: 0px;
     left: 25px;
     font-size: 21px;
-    color: rgb(254,189,105);
+    color: var(--amazon-color);
 }
