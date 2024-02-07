@@ -1,0 +1,80 @@
+.contents
+{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 10px;
+    border:solid rgb(225, 225, 225) 1px;
+    border-radius: 10px;
+}
+.container
+{
+    width: 700px;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);    
+}
+.products,.TrackPackage
+{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    padding: 10px;
+}
+.products img
+{
+    width: 100px;
+    object-fit: contain;
+}
+.buy-again img
+{
+    width: 25px;
+    object-fit: contain;
+}
+.TrackPackage
+{
+    height: 25px;
+}
+.TrackPackage button
+{
+    border: none;
+    border-radius: 10px;
+    padding:10px;
+    background-color:rgb(225, 225, 225);
+}
+button.buy-again
+{
+    border: none;
+    border-radius: 55px;
+    width: 100px;
+    background-color: rgb(255,216,20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.details
+{
+    display:flex;
+    flex-direction: column;
+    row-gap: 5px;
+    border-radius: 10px;
+}
+.order-id
+{
+    padding-left: 20px;
+}
+.orders-title
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: rgb(225, 225, 225);
+    padding: 10px;
+    border-radius: 10px;
+}
+.returns-orders
+{
+    border:solid rgb(225, 225, 225) 1px;
+}
