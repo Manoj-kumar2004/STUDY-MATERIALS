@@ -24,7 +24,8 @@ html+=`        <div class="product">
                 <option value="2">10</option>
             </select>
         </div>
-        <button class="addcart" data-product-id=${value.id}>ADD TO CART</button>
+        <div class='cart-added'>added</div>
+        <button class="addcart added" data-product-id=${value.id}>ADD TO CART</button>
     </div>`
 })
 document.querySelector('.orders-grid').innerHTML=html;

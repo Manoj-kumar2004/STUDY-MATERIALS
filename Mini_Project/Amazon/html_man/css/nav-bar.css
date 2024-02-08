@@ -69,6 +69,7 @@ nav
 }
 .search input:focus,.search input:hover
 {
+    box-sizing: border-box;
     outline:none;
     border: solid 2px var(--amazon-color);
 }
@@ -95,7 +96,7 @@ width:100px
 }
 .carts img{
     object-fit: contain;
-    width: 50px;
+    width:60px;
 }
 .Cart-nav
 {
@@ -108,13 +109,12 @@ width:100px
 .returns:hover,.Cart-nav:hover,.logo:hover
 {
     border: solid white 2px;
-    padding: 3px;
 }
 .cart-quantity {
     display: inline-block;
     position: absolute;
-    top: 0px;
-    left: 25px;
+    top: 2px;
+    left: 33px;
     font-size: 21px;
     color: var(--amazon-color);
 }
@@ -135,4 +135,8 @@ a
 {
     text-decoration: none;
     color: white;
+}
+.returns,.Cart-nav,.logo
+{
+    padding: 10px;
 }

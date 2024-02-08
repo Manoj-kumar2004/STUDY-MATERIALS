@@ -103,3 +103,22 @@
 	height: 300px;
 	object-fit: contain;
 }
+.cart-added
+{
+	color: green;
+	font-weight: bold;
+	display: none;
+	transition: display 1s;
+
+}
+.add
+{
+	color: green;
+	font-weight: bold;
+	transition: display 1s;
+	display: inline-block;
+}
+.gen
+{
+	transition: display 1s;
+}
