@@ -1,0 +1,25 @@
+.product
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.product img
+{
+    width:100px;
+    object-fit: contain;
+}
+.details
+{
+    display: flex;
+    flex-direction: column;
+}
+.delivery
+{
+    display: flex;
+    flex-direction:column;
+}
+.outer
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
