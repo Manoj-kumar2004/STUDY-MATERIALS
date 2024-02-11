@@ -15,3 +15,50 @@ export let cart=[
     }
 
 ];
+export function removeItemfromCart(ID)
+{
+    let newcart=[];
+    cart.forEach((value)=>
+    {
+        if(value.productid!==ID) 
+{        newcart.push(
+            {
+                productid:value.productid,
+                quantity:value.quantity
+            }
+        )}
+    })
+
+    cart=newcart;
+    console.log(cart);
+}
+ 
+export function addToCart()
+{
+    document.querySelectorAll('.addcart').forEach
+(
+    (button)=>
+    {
+        button.addEventListener('click',()=>
+        {
+            let match;
+        cart.forEach((item)=>
+        {
+            if(item.productid===button.dataset.productId)match=item;
+
+        })
+        if(match)match.quantity++;
+        
+        else{
+                 cart.push({
+        productid:button.dataset.productId,
+        quantity:1})   
+        }
+        let quantity=0;
+            cart.forEach((item)=>{quantity+=item.quantity})
+            
+            document.querySelector('.cart-quantity').innerHTML=quantity;
+                })
+    }
+)
+}
