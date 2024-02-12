@@ -1,4 +1,8 @@
-export let cart=[
+export let cart=JSON.parse(localStorage.getItem('cart'));
+export let quantity=JSON.parse(localStorage.getItem('quant'))
+if(!cart)
+{
+cart=[
     {
         productid:'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
         image:"images/products/athletic-cotton-socks-6-pairs.jpg",
@@ -14,7 +18,17 @@ export let cart=[
 
     }
 
-];
+];}
+
+export function updatecart(quantity)
+{
+    document.querySelector('.cart-quantity').innerHTML=quantity;
+    localStorage.setItem('quant',JSON.stringify(quantity));
+}
+function addToStorage(cart)
+{
+    localStorage.setItem('cart',JSON.stringify(cart));
+}
 export function removeItemfromCart(ID)
 {
     let newcart=[];
@@ -30,7 +44,7 @@ export function removeItemfromCart(ID)
     })
 
     cart=newcart;
-    console.log(cart);
+    addToStorage(cart);
 }
  
 export function addToCart()
@@ -54,11 +68,14 @@ export function addToCart()
         productid:button.dataset.productId,
         quantity:1})   
         }
-        let quantity=0;
+            quantity=0;
             cart.forEach((item)=>{quantity+=item.quantity})
             
-            document.querySelector('.cart-quantity').innerHTML=quantity;
-                })
+            updatecart(quantity);
+            addToStorage(cart);
+        
+        })
     }
+
 )
 }

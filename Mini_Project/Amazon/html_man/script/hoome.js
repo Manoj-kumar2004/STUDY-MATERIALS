@@ -1,5 +1,5 @@
-import { products } from "../../javascript-amazon-project/data/products.js";
-import {cart,addToCart} from '../script/cart.js' 
+import { products } from "./../../javascript-amazon-project/data/products.js";
+import {cart,addToCart} from './../script/cart.js' 
 let html='';
 products.forEach((value)=>
 {
@@ -30,7 +30,7 @@ html+=`        <div class="product">
     </div>`
 })
 document.querySelector('.orders-grid').innerHTML=html;
-addToCart();
+addToCart(cart);
 document.querySelectorAll('.addcart').forEach(
     (element)=>
     {
@@ -45,3 +45,4 @@ document.querySelectorAll('.addcart').forEach(
             })
 
         })
+

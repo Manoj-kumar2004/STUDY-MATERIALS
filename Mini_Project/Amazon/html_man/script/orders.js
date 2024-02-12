@@ -1,7 +1,10 @@
-import {cart,removeItemfromCart} from '../script/cart.js';
+import {cart,removeItemfromCart,updatecart} from '../script/cart.js';
 import{products} from '../../javascript-amazon-project/data/products.js';
+let quantity=JSON.parse(localStorage.getItem('quant'));
+console.log(quantity)
  let html='';
  let matchingitem;
+ console.log(cart)
 cart.forEach(cartItem => {
     products.forEach((item)=>
    { 
@@ -98,5 +101,7 @@ document.querySelectorAll('.js-delete').forEach((value)=>
 
     removeItemfromCart(value.dataset.productId);
 document.querySelector(`.js-remove-${value.dataset.productId}`).remove();
+updatecart(quantity);
   })
 })
+document.querySelector('.return-to-home-link').innerHTML=`${JSON.parse(localStorage.getItem('quant'))} items`;
