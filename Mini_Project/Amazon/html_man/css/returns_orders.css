@@ -2,19 +2,19 @@
 {
     display: grid;
     grid-template-columns:1fr;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: 100px 1fr;
     row-gap: 10px;
     border:solid rgb(225, 225, 225) 1px;
     border-radius: 10px;
 }
 .container
 {
-    width: 700px;
-    position: relative;
-    top: 50%;
+    width: 600px;
+    position: relative;  
+    top:50%;
+    left: 50%;
     bottom: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);    
+    transform: translate(-50%,-50%); 
 }
 .products,.TrackPackage
 {
@@ -24,11 +24,7 @@
     justify-content: space-around;
     padding: 10px;
 }
-.products img
-{
-    width: 100px;
-    object-fit: contain;
-}
+
 .buy-again img
 {
     width: 25px;
@@ -69,6 +65,7 @@ button.buy-again
 .orders-title
 {
     display: grid;
+    height: 100px;
     grid-template-columns: repeat(3,1fr);
     background-color: rgb(225, 225, 225);
     padding: 10px;
@@ -77,4 +74,13 @@ button.buy-again
 .returns-orders
 {
     border:solid rgb(225, 225, 225) 1px;
+}
+.images
+{
+    width: 100px;
+}
+.images img
+{
+    width: 100%;
+    object-fit: contain;
 }

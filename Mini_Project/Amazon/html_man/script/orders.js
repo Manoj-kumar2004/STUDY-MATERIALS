@@ -102,6 +102,69 @@ document.querySelectorAll('.js-delete').forEach((value)=>
     removeItemfromCart(value.dataset.productId);
 document.querySelector(`.js-remove-${value.dataset.productId}`).remove();
 updatecart(quantity);
+addHTMLToPaymentSummary(cart)
   })
 })
 document.querySelector('.return-to-home-link').innerHTML=`${JSON.parse(localStorage.getItem('quant'))} items`;
+addHTMLToPaymentSummary(cart)
+function addHTMLToPaymentSummary(cart)
+{
+  let total= findTotal(),html='';
+
+
+  html=`
+  <div class="payment-summary">
+  <div class="payment-summary-title">
+    Order Summary
+  </div>
+
+  <div class="payment-summary-row">
+    <div>Items (${JSON.parse(localStorage.getItem('quant'))}):</div>
+    <div class="payment-summary-money">$${(total/100).toFixed(2)}</div>
+  </div>
+
+  <div class="payment-summary-row">
+    <div>Shipping &amp; handling:</div>
+    <div class="payment-summary-money">$4.99</div>
+  </div>
+
+  <div class="payment-summary-row subtotal-row">
+    <div>Total before tax:</div>
+    <div class="payment-summary-money">$${((total+499)/100).toFixed(2)}</div>
+  </div>
+
+  <div class="payment-summary-row">
+    <div>Estimated tax (10%):</div>
+    <div class="payment-summary-money">$${(((total+499)/100)/10).toFixed(2)}</div>
+  </div>
+
+  <div class="payment-summary-row total-row">
+    <div>Order total:</div>
+    <div class="payment-summary-money">$${((total+499+(total+499)/10)/100).toFixed(2)}</div>
+  </div>
+
+  <button class="place-order-button button-primary">
+    Place your order
+  </button>
+</div>
+  `
+  console.log(html)
+  document.querySelector('.payment-summary').innerHTML=html
+}
+export  function findTotal()
+{
+  let total=0
+  cart.forEach((value)=>
+  { 
+    let match={};
+    products.forEach((prod)=>
+    {
+      if(value.productid===prod.id)
+      {
+        match=prod;
+      }
+    })
+    total+=value.quantity*(match.priceCents);
+  })
+  return total;
+}
